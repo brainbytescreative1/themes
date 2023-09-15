@@ -1,0 +1,81 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
+
+// colors
+$teal:      #357591;
+$teal-light:#8bb2c3;
+$black:     #000000;
+$gray:      #ababab;
+$yellow:    #998656;
+
+
+$primary:       $teal;
+$secondary:     $yellow;
+$success:       $gray;
+$light:         #f4f4f4;
+$dark:          $black;
+$gray:          $gray;
+$info:          $teal-light;
+
+$colors: (
+  "teal":       $teal,
+  "blue":       $teal-light,
+  "yellow":     $yellow,
+);
+
+// breakpoints
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1440px
+);
+
+// spacer
+$spacer: 3rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+
+// negative margin
+$enable-negative-margins: true;
+
+// buttons
+/*
+$input-btn-font-family: "Josefin Sans", sans-serif;
+$input-btn-padding-x: 1.50rem !default;
+$input-btn-padding-y: .50rem !default;
+$font-weight-600: "font-weight: 600";
+
+$btn-font-family:      $input-btn-font-family;
+$btn-padding-x:        $input-btn-padding-x;
+$btn-padding-y:        $input-btn-padding-y;
+*/
+
+$input-btn-padding-x:   1rem !default;
+$input-btn-padding-y:   .35rem !default;
+$btn-padding-x:         $input-btn-padding-x;
+$btn-padding-y:         $input-btn-padding-y;
+$btn-link-hover-color:#ffffff;
+
+// navbar
+$navbar-nav-link-padding-x: .75rem;
+
+// border-radius
+$border-radius:               1.25rem;
+$border-radius-sm:            2.25rem;
+$border-radius-md:            3.25rem;
+$border-radius-lg:            4.25rem;
+$border-radius-xl:            5.25rem;
+$border-radius-2xl:           6.25rem;
+$border-radius-pill:          50rem;
+
+// typography
+$font-family-base:            "Josefin Sans", sans-serif;
+$headings-font-family:        "Josefin Sans", sans-serif;
