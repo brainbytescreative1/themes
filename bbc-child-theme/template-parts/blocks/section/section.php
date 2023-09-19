@@ -497,7 +497,26 @@ echo '<div class="'. esc_attr($container_classes) . esc_attr($class_name) .'" st
 
                 // process global functions
                 $col_spacing = get_spacing_bbc(get_sub_field('column_spacing'), 'column');
-                $col_classes[] = get_borders(get_sub_field('column_borders'));
+                //$col_classes[] = get_borders(get_sub_field('column_borders'));
+
+                $column_border_element = get_sub_field('column_border_element');
+                $borders = get_borders(get_sub_field('column_borders'));
+
+                if ( $borders && ( $column_border_element !== 'default' ) ) {
+                    if ( $column_border_element === 'col-element' ) {
+                        $col_classes[] = $borders;
+                    } elseif ( $column_border_element === 'col-inner' ) {
+                        $col_inner_classes[] = $borders;
+                    } elseif ( $column_border_element === 'col-inner-content' ) {
+                        $column_inner_content_classes[] = $borders;
+                    }
+                } elseif ( $borders ) {
+                    if ( $element_assignment == 'outer') {
+                        $col_classes[] = $borders;
+                    } else {
+                        $col_inner_classes[] = $borders;
+                    }
+                }
                 
                 if ( $element_assignment == 'outer') {
                     $col_classes[] = $col_spacing;

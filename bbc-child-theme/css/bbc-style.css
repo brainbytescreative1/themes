@@ -289,6 +289,21 @@ ul.two-columns-list {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
+/* dropdown icon */
+.dropdown-toggle::after {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    content: "\f078";
+    border: 0;
+    font-size: .7rem;
+    top: 1px;
+    position: relative;
+}
 /** sticky menu **/
 #main-nav-sticky {
     padding-top: .5rem;

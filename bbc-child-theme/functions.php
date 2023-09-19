@@ -77,6 +77,23 @@ function understrap_default_bootstrap_version() {
 }
 add_filter( 'theme_mod_understrap_bootstrap_version', 'understrap_default_bootstrap_version', 20 );
 
+// container width
+function understrap_default_container_type() {
+	return 'container';
+}
+add_filter( 'theme_mod_understrap_container_type', 'understrap_default_container_type', 20 );
+
+// navigation type
+function understrap_default_navbar_type() {
+	return 'offcanvas';
+}
+add_filter( 'theme_mod_understrap_navbar_type', 'understrap_default_navbar_type', 20 );
+
+// sidebar positioning
+function understrap_default_sidebar_position() {
+	return 'none';
+}
+add_filter( 'theme_mod_understrap_sidebar_position', 'understrap_default_sidebar_position', 20 );
 
 
 /**

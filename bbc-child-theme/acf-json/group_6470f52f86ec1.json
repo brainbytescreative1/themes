@@ -317,6 +317,32 @@
             "endpoint": 0
         },
         {
+            "key": "field_650a0ae85cc3c",
+            "label": "Column Border Element",
+            "name": "column_border_element",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "choices": {
+                "default": "default",
+                "col-element": "col-element",
+                "col-inner": "col-inner",
+                "col-inner-content": "col-inner-content"
+            },
+            "default_value": "default",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
             "key": "field_64f0dd6325d00",
             "label": "Column Borders",
             "name": "column_borders",
@@ -551,7 +577,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1693506940,
+    "modified": 1695157372,
     "acfe_categories": {
         "global": "Global"
     }

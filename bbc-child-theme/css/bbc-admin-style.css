@@ -100,7 +100,7 @@
 	overflow: hidden;
 }
 /* modal editor */
-/* .interface-interface-skeleton__content {
-	overflow-x: hidden;
-} */
-/*# sourceMappingURL=bbc-admin-style.css.map */
+.acfe-modal-wrapper {
+	margin-right: 9px;
+	max-width: calc(100vw - 317px) !important;
+}
