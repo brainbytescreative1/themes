@@ -2131,7 +2131,7 @@ a.col-inner {
     margin-bottom: 1rem;
 }
 
-/*** forms ***/
+/*** gravity forms ***/
 .gform_wrapper .gform_heading {
     display: none;
 }
@@ -2187,6 +2187,12 @@ a.col-inner {
 .gform_wrapper .gfield_select option {
     font-weight: 600 !important;
 }
+/* submit */
+.gform_footer {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
 
 /** back to top button **/
 #btn-back-to-top {
