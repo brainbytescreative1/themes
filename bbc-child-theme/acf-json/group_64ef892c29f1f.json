@@ -3,8 +3,41 @@
     "title": "Borders",
     "fields": [
         {
+            "key": "field_6532814641c47",
+            "label": "Border Radius All",
+            "name": "border_radius_all",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "default",
+                "0": "0",
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5"
+            },
+            "default_value": "default",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": ""
+        },
+        {
             "key": "field_64ef95926eed4",
-            "label": "Border Radius",
+            "label": "Border Radius Desktop",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -16,7 +49,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "placement": "top",
             "endpoint": 0
         },
@@ -34,9 +66,9 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "choices": {
                 "default": "default",
+                "0": "0",
                 "1": "1",
                 "2": "2",
                 "3": "3",
@@ -46,12 +78,12 @@
             "default_value": "default",
             "return_format": "value",
             "multiple": 0,
+            "allow_custom": 0,
+            "placeholder": "",
+            "search_placeholder": "",
             "allow_null": 0,
             "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": ""
+            "ajax": 0
         },
         {
             "key": "field_64ef8a931b7fa",
@@ -67,9 +99,9 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "choices": {
                 "default": "default",
+                "0": "0",
                 "1": "1",
                 "2": "2",
                 "3": "3",
@@ -79,12 +111,12 @@
             "default_value": "default",
             "return_format": "value",
             "multiple": 0,
+            "allow_custom": 0,
+            "placeholder": "",
+            "search_placeholder": "",
             "allow_null": 0,
             "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": ""
+            "ajax": 0
         },
         {
             "key": "field_64ef8bcd1b802",
@@ -100,9 +132,9 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "choices": {
                 "default": "default",
+                "0": "0",
                 "1": "1",
                 "2": "2",
                 "3": "3",
@@ -112,12 +144,12 @@
             "default_value": "default",
             "return_format": "value",
             "multiple": 0,
+            "allow_custom": 0,
+            "placeholder": "",
+            "search_placeholder": "",
             "allow_null": 0,
             "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": ""
+            "ajax": 0
         },
         {
             "key": "field_64ef8aa51b7fb",
@@ -133,9 +165,9 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "choices": {
                 "default": "default",
+                "0": "0",
                 "1": "1",
                 "2": "2",
                 "3": "3",
@@ -145,16 +177,16 @@
             "default_value": "default",
             "return_format": "value",
             "multiple": 0,
+            "allow_custom": 0,
+            "placeholder": "",
+            "search_placeholder": "",
             "allow_null": 0,
             "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": ""
+            "ajax": 0
         },
         {
             "key": "field_64ef97c5c1b2b",
-            "label": "Border Radius",
+            "label": "Border Radius Desktop End",
             "name": "",
             "aria-label": "",
             "type": "accordion",
@@ -219,7 +251,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "choices": {
                 "default": "default",
                 "1": "1",
@@ -231,12 +262,12 @@
             "default_value": "default",
             "return_format": "value",
             "multiple": 0,
+            "allow_custom": 0,
+            "placeholder": "",
+            "search_placeholder": "",
             "allow_null": 0,
             "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": ""
+            "ajax": 0
         },
         {
             "key": "field_64ef96b4603f6",
@@ -252,7 +283,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "choices": {
                 "default": "default",
                 "1": "1",
@@ -264,12 +294,12 @@
             "default_value": "default",
             "return_format": "value",
             "multiple": 0,
+            "allow_custom": 0,
+            "placeholder": "",
+            "search_placeholder": "",
             "allow_null": 0,
             "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": ""
+            "ajax": 0
         },
         {
             "key": "field_64ef96be603f7",
@@ -285,7 +315,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "choices": {
                 "default": "default",
                 "1": "1",
@@ -297,12 +326,12 @@
             "default_value": "default",
             "return_format": "value",
             "multiple": 0,
+            "allow_custom": 0,
+            "placeholder": "",
+            "search_placeholder": "",
             "allow_null": 0,
             "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": ""
+            "ajax": 0
         },
         {
             "key": "field_64ef96cd603f8",
@@ -318,7 +347,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "choices": {
                 "default": "default",
                 "1": "1",
@@ -330,12 +358,12 @@
             "default_value": "default",
             "return_format": "value",
             "multiple": 0,
+            "allow_custom": 0,
+            "placeholder": "",
+            "search_placeholder": "",
             "allow_null": 0,
             "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": ""
+            "ajax": 0
         },
         {
             "key": "field_64ef97cdc1b2c",
@@ -387,7 +415,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "choices": {
                 "default": "default",
                 "1": "1",
@@ -399,12 +426,12 @@
             "default_value": "default",
             "return_format": "value",
             "multiple": 0,
+            "allow_custom": 0,
+            "placeholder": "",
+            "search_placeholder": "",
             "allow_null": 0,
             "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": ""
+            "ajax": 0
         },
         {
             "key": "field_64ef96e5603fa",
@@ -420,7 +447,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "choices": {
                 "default": "default",
                 "1": "1",
@@ -432,12 +458,12 @@
             "default_value": "default",
             "return_format": "value",
             "multiple": 0,
+            "allow_custom": 0,
+            "placeholder": "",
+            "search_placeholder": "",
             "allow_null": 0,
             "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": ""
+            "ajax": 0
         },
         {
             "key": "field_64ef96e9603fb",
@@ -453,7 +479,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "choices": {
                 "default": "default",
                 "1": "1",
@@ -465,12 +490,12 @@
             "default_value": "default",
             "return_format": "value",
             "multiple": 0,
+            "allow_custom": 0,
+            "placeholder": "",
+            "search_placeholder": "",
             "allow_null": 0,
             "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": ""
+            "ajax": 0
         },
         {
             "key": "field_64ef96eb603fc",
@@ -486,7 +511,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "choices": {
                 "default": "default",
                 "1": "1",
@@ -498,12 +522,12 @@
             "default_value": "default",
             "return_format": "value",
             "multiple": 0,
+            "allow_custom": 0,
+            "placeholder": "",
+            "search_placeholder": "",
             "allow_null": 0,
             "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": ""
+            "ajax": 0
         },
         {
             "key": "field_64ef97d6c1b2d",
@@ -549,8 +573,8 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1693597250,
     "acfe_categories": {
         "clone": "Clone"
-    }
+    },
+    "modified": 1699907416
 }

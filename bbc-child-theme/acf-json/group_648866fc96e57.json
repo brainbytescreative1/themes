@@ -16,7 +16,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "placement": "top",
             "endpoint": 0
         },
@@ -34,7 +33,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "allow_null": 1,
             "display_or_return": "return"
         },
@@ -52,7 +50,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "choices": {
                 "Table of Contents": "Table of Contents"
             },
@@ -88,7 +85,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "default_value": "",
             "tabs": "all",
             "toolbar": "full",
@@ -109,7 +105,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "choices": {
                 "enable": "Enable",
                 "disable": "Disable"
@@ -138,7 +133,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "default_value": "",
             "min": "",
             "max": "",
@@ -173,7 +167,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1688134889,
+    "modified": 1699907423,
     "acfe_categories": {
         "layouts": "Layouts"
     }

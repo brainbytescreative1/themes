@@ -38,20 +38,14 @@ if( get_row_layout() == 'divider' ):
             $divider_classes[] = 'bg-' . $divider_color;
         }
 
-        /*
-        $divider_spacing = $divider['divider_spacing'];
-        if ( !empty( $divider_spacing ) ) {
-            foreach ( $divider_spacing as $spacing ) {
-                if ( $spacing != 'default' ) {
-                    $divider_classes[] = $spacing;
-                }
-            }
-        }
-        */
-
         $alignment = $divider['alignment'];
         if ( $alignment ) {
             $divider_classes[] = 'align-' . $alignment;
+        }
+
+        $additional_classes = $divider['additional_classes'];
+        if ( $additional_classes ) {
+            $divider_classes[] = $additional_classes;
         }
 
         $divider_classes[] = get_spacing_bbc($divider['divider_spacing']);

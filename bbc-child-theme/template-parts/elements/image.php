@@ -13,6 +13,22 @@ if( get_row_layout() == 'image' ):
         $classes[] = 'img';
         $classes[] = 'element';
 
+        $link_wrapper_tag = 'div';
+        $image_link = get_sub_field('image_link');
+
+        if ( $image_link ) {
+
+            $title = $image_link['title'];
+            $url = $image_link['url'];
+            $target = $image_link['target'];
+            if ( $target ) {
+                $target = ' target="' . $target . ' "';
+            }
+
+            $link_wrapper_tag = 'a '. $target .' href="'. $url .'"';
+
+        }
+
         // image settings
         $image_alignment = get_sub_field('image_alignment');
         if ( $image_alignment ) {
@@ -27,6 +43,11 @@ if( get_row_layout() == 'image' ):
                 $classes[] = 'align-right';
                 $classes[] = 'ms-auto';
             }
+        }
+
+        $force_full_width = get_sub_field('force_full_width');
+        if ( $force_full_width && ( $force_full_width == 'yes' ) ) {
+            $classes[] = 'force-full-width';
         }
 
         $max_width = get_sub_field('max_width');
@@ -59,9 +80,9 @@ if( get_row_layout() == 'image' ):
         $styles = trim(implode(' ', $styles));
 
         ?>
-        <div class="<?=$classes?>">
+        <<?=$link_wrapper_tag?> class="<?=$classes?>">
             <img src="<?=$thumb?>" alt="<?=$alt?>" style="<?=$styles?>" />
-        </div>
+        </<?=$link_wrapper_tag?>>
     
     <?php endif;
 

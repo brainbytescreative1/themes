@@ -16,7 +16,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "default_value": "",
             "maxlength": "",
             "placeholder": "",
@@ -37,7 +36,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "choices": {
                 "h1": "h1",
                 "h2": "h2",
@@ -91,7 +89,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "clone": [
                 "group_646f9ee38225a"
             ],
@@ -99,6 +96,127 @@
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 1,
+            "acfe_seamless_style": 1,
+            "acfe_clone_modal": 0,
+            "acfe_clone_modal_close": 0,
+            "acfe_clone_modal_button": "",
+            "acfe_clone_modal_size": "large"
+        },
+        {
+            "key": "field_650c719b75930",
+            "label": "Heading Options",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_650c71de75931",
+            "label": "Page Title",
+            "name": "page_title",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "disabled": "disabled",
+                "enabled": "enabled"
+            },
+            "default_value": "disabled",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_650c6fc157b7f",
+            "label": "Line Through Heading",
+            "name": "line_through",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "disabled": "disabled",
+                "enabled": "enabled"
+            },
+            "default_value": "disabled",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_650c704957b80",
+            "label": "Line Size",
+            "name": "line_size",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_650c6fc157b7f",
+                        "operator": "==",
+                        "value": "enabled"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "34",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_650c73a377c35",
+            "label": "Line Color",
+            "name": "line_color",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_646f908576c59"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0,
             "acfe_seamless_style": 1,
             "acfe_clone_modal": 0,
             "acfe_clone_modal_close": 0,
@@ -137,7 +255,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "clone": [
                 "group_64c16b209295d"
             ],
@@ -177,7 +294,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1690567029,
+    "modified": 1699907419,
     "acfe_categories": {
         "elements": "Elements"
     }

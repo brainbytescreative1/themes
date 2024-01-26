@@ -115,7 +115,7 @@ add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_co
 
 // enqueue custom stylesheet
 function bbc_stylesheet_js() {
-	wp_enqueue_style( 'bbc-style', get_stylesheet_directory_uri() . '/css/bbc-style.css' );
+	wp_enqueue_style( 'bbc-style', get_stylesheet_directory_uri() . '/style.css', false, '1.0.2' );
 	wp_enqueue_script( 'bbc-scripts', get_stylesheet_directory_uri() . '/js/bbc-scripts.js', array(), '1.0.0' );
 }
 add_action( 'wp_enqueue_scripts', 'bbc_stylesheet_js' );
@@ -123,14 +123,14 @@ add_action( 'wp_enqueue_scripts', 'bbc_stylesheet_js' );
 // enqueue admin stylesheet
 add_action( 'admin_enqueue_scripts', 'load_admin_style' );
 function load_admin_style() {
-	wp_enqueue_style( 'admin_css', get_stylesheet_directory_uri() . '/css/bbc-admin-style.css', false, '1.0.0' );
-    //wp_enqueue_style( 'admin_front_css', get_stylesheet_directory_uri() . '/css/bbc-style.css', false, '1.0.0' );
+	wp_enqueue_style( 'admin_css', get_stylesheet_directory_uri() . '/bbc-admin-style.css', false, '1.0.0' );
+    wp_enqueue_style( 'admin_front_css', get_stylesheet_directory_uri() . '/style.css', false, '1.0.0' );
 }
 
 // enqueue acf admin stylesheet
 //add_action('acf/input/admin_enqueue_scripts', 'my_acf_admin_enqueue_scripts');
 function my_acf_admin_enqueue_scripts() {
-    wp_enqueue_style( 'my-acf-input-css', get_stylesheet_directory_uri() . '/css/bbc-style.css', false, '1.0.0' );
+    wp_enqueue_style( 'my-acf-input-css', get_stylesheet_directory_uri() . '/style.css', false, '1.0.0' );
 }
 
 // mce fix
@@ -148,7 +148,7 @@ add_filter( 'tiny_mce_before_init', 'slug_editor_body_margin_fix' );
 add_action( 'after_setup_theme', 'misha_gutenberg_css' );
 function misha_gutenberg_css(){
 	add_theme_support( 'editor-styles' );
-	add_editor_style( get_stylesheet_directory_uri() . '/css/bbc-style.css' );
+	add_editor_style( get_stylesheet_directory_uri() . '/style.css' );
 	add_editor_style( 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' );
 }
 
@@ -172,6 +172,7 @@ function change_default_jquery( ){
 }
 
 // include separate functions files
+require_once( __DIR__ . '/functions/options-pages.php');
 require_once( __DIR__ . '/functions/root-style.php');
 require_once( __DIR__ . '/functions/menus.php');
 require_once( __DIR__ . '/functions/blocks.php');

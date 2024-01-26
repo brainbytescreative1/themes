@@ -123,7 +123,7 @@ function get_background_bbc($field, $classes, $styles, $sub = false) {
 
                     if ( $image ) {
 
-                        //$image = $image . '.webp';
+                        $image = $image . '.webp';
 
                         $return_styles[] = 'background: url(' . $image . ');';
                         $return_styles[] = 'background-size: ' . $size . ';';
@@ -468,7 +468,7 @@ function get_spacing_bbc( $field, $field_type = false, $classes = false ) {
 
 }
 
-function get_heading_style_bbc( $field, $classes, $sub = false ) {
+function get_heading_style_bbc( $field, $sub = false ) {
 
     if ( $field ) {
         
@@ -480,9 +480,24 @@ function get_heading_style_bbc( $field, $classes, $sub = false ) {
 
         if ( $field ) {
 
+            $classes = [];
+
             // style
             if ( $field['alignment'] && ( $field['alignment'] != 'default' ) ) {
-                $classes[] = 'align-' . $field['alignment'];
+
+                $alignment = '';
+
+                if ( $field['alignment'] === 'left' ) {
+                    $alignment = 'start';
+                } elseif ( $field['alignment'] === 'right' ) {
+                    $alignment = 'end';
+                } else {
+                    $alignment = 'center';
+                }
+
+                $classes[] = 'text-' . $alignment;
+            } else {
+                $classes[] = 'text-start';
             }
             if ( $field['theme_colors'] ) {
                 $classes[] = 'text-' . $field['theme_colors'];
@@ -528,29 +543,35 @@ function get_buttons_bbc( $field ) {
 
             $alignment = $field['alignment'];
             $space_between = $field['space_between'];
+
+            $button_margin = '';
+
             if ( $space_between !== 'default' ) {
                 $button_group_classes[] = 'gap-' . $space_between;
             } elseif ( count($buttons) > 1 ) {
                 $space_between = 1;
                 $button_group_classes[] = 'gap-' . $space_between;
+                $button_margin = 'mb-lg-' . $space_between;
             }
 
             $button_group_classes[] = 'element';
-            $button_group_classes[] = 'd-lg-grid';
             $button_width = null;
 
 
             switch ($alignment) {
                 case 'left':
-                    $button_group_classes[] = 'd-lg-flex';
+                    $button_group_classes[] = 'd-block';
                     break;
                 case 'center':
+                    $button_group_classes[] = 'd-lg-grid';
                     $button_group_classes[] = 'd-lg-flex justify-content-lg-center';
                     break;
                 case 'right':
+                    $button_group_classes[] = 'd-lg-grid';
                     $button_group_classes[] = 'd-lg-flex justify-content-lg-end';
                     break;
                 case 'auto-resize':
+                    $button_group_classes[] = 'd-lg-grid';
                     $button_width = 'col-md-' . ( 12 / count($buttons) );
                     $button_group_classes[] = 'btn-group';
                     $button_group_classes[] = 'd-lg-flex';
@@ -559,6 +580,7 @@ function get_buttons_bbc( $field ) {
                     }
                     break;
                 case 'stacked':
+                    $button_group_classes[] = 'd-lg-grid';
                     $button_group_classes[] = '';
                     break;
                 default;
@@ -586,6 +608,7 @@ function get_buttons_bbc( $field ) {
 
                 $button_classes = [];
                 $button_styles = [];
+                $text_classes = [];
                 
                 // content
                 $button_link = $button['button_link'];
@@ -600,6 +623,10 @@ function get_buttons_bbc( $field ) {
                 // style
                 $button_classes[] = 'element';
                 $button_color = $button['button_color'];
+                $button_font = $button['button_font'];
+                if ( $button_font ) {
+                    $text_classes[] = 'font-' . $button_font;
+                }
 
                 // button style
                 $button_style = $button['button_style'];
@@ -611,7 +638,11 @@ function get_buttons_bbc( $field ) {
                 } elseif ( $button_style == 'outline' ) {
                     $button_classes[] = 'btn';
                     $button_classes[] = 'btn-'. $button_style . '-' . $button_color;
-                    $button_classes[] = 'btn-outline-hover';
+                    $button_classes[] = 'btn-outline';
+                } elseif ( $button_style == 'link' ) {
+                    $button_classes[] = 'btn';
+                    $button_classes[] = 'btn-link';
+                    $button_classes[] = 'text-' . $button_color;
                 } else {
                     $button_classes[] = 'btn';
                     $button_classes[] = 'btn-'. $button_color;
@@ -623,15 +654,46 @@ function get_buttons_bbc( $field ) {
                     $button_classes[] = 'btn-'. $button_size;
                 }
 
+                if ( $alignment === 'left' ) {
+                    $button_classes[] = $button_margin;
+                }
+
                 $button_classes[] = $button_width;
 
-                // icon
-                $button_icon = $button['button_icon'];
+                // icon / image
+                $button_icon = null;
+                $button_icon_styles = null;
+                $add_icon_image = $button['add_icon_image'];
+
+                if ( $add_icon_image === 'icon' ) {
+
+                    $button_icon = $button['button_icon'];
                 
-                if ( $button_icon ) {
-                    $button_classes[] = 'button-icon';
-                    $button_classes[] = 'icon-position-' . $button['icon_position'];
-                    $button_icon = '<i class="'. $button_icon . ' icon-' . $button['icon_position'] .'" aria-hidden="true"></i>';
+                    if ( $button_icon ) {
+                        $button_classes[] = 'button-icon';
+                        $button_classes[] = 'icon-position-' . $button['icon_position'];
+                        $button_icon = '<i class="'. $button_icon . ' icon-' . $button['icon_position'] .'" aria-hidden="true"></i>';
+                    }
+
+                } elseif ( $add_icon_image === 'image' ) {
+
+                    $button_image = $button['button_image'];
+
+                    $icon_image_size = $button['icon_image_size'];
+                    if ( $icon_image_size ) {
+                        $image_width = $icon_image_size['width'];
+                        $image_height = $icon_image_size['height'];
+                        $button_icon_styles = 'width: ' . $image_width . 'px; height: ' . $image_height . 'px;';
+                    }
+
+                    if ( $button_image ) {
+
+                        $button_classes[] = 'button-image';
+                        $button_classes[] = 'icon-position-' . $button['icon_position'];
+                        $button_icon = '<img src="' . $button['button_image'] . '" style="'. $button_icon_styles .'" />';
+
+                    }
+
                 }
 
                 if ( count($buttons) > 1 ) {
@@ -647,9 +709,12 @@ function get_buttons_bbc( $field ) {
                 // process button styles
                 $button_classes = implode(' ', $button_classes);
                 $button_styles = implode(' ', $button_styles);
+                $text_classes = implode(' ', $text_classes);
 
                 $button_tag_start = '<a type="button" href="'. esc_attr($url) .'" title="'. esc_attr($title) .'" class="'. esc_attr($button_classes) .'" style="'. esc_attr($button_styles) .'"'. $target .'>';
-                $button_content = esc_attr($title);
+
+                $button_content = '<span class="'. $text_classes .'">' . esc_attr($title) . '</span>';
+
                 $button_tag_end = '</a>';
 
                 if ( $button_icon && ( ( $button['icon_position'] == 'left' ) || ( $button['icon_position'] == 'top' ) ) ) {
@@ -658,7 +723,8 @@ function get_buttons_bbc( $field ) {
                     echo $button_tag_start . $button_content . $button_icon . $button_tag_end;
                 } else {
                     echo $button_tag_start . $button_content . $button_tag_end;
-                }            
+                }
+                $secondary_button_enable = get_field('secondary_button', 'style');
 
             }
 
@@ -727,11 +793,15 @@ function get_text_styles_bbc($field, $classes, $styles = false, $sub = false) {
 
 }
 
-function get_borders($field) {
+function get_borders_bbc($field) {
 
     $classes = [];
 
     if ( $field ) {
+
+        if ( $field['border_radius_all'] !== 'default' ) {
+            $classes[] = 'rounded-' . $field['border_radius_all'];
+        }
         
         if ( $field['border-top-left-radius'] !== 'default' ) {
             $classes[] = 'border-top-left-radius-' . $field['border-top-left-radius'];
@@ -758,6 +828,55 @@ function get_borders($field) {
     } else {
 
         return null;
+
+    }
+
+}
+
+function get_color_bbc($field, $return_styles = false, $sub = false ) {
+
+    if ( $field ) {
+
+        // initialize arrays
+        $return_array = [];
+        $classes = [];
+        $styles = [];
+
+        // determine if sub field
+        if ( $sub ) {
+            $field = get_sub_field($field);
+        } else {
+            $field = get_field($field);
+        }
+
+        $theme_colors = $field['theme_colors'];
+        $transparency = $field['transparency'];
+        $custom_color = $field['custom_color'];
+
+        if ( $return_styles ) {
+
+            $color = '';
+
+            $transparency = ( $transparency / 100 );
+
+            if ( $custom_color ) {
+
+                $custom_color = str_replace( '#', '', $custom_color );
+
+                $split_hex_color = str_split( $custom_color, 2 );
+                $rgb1 = hexdec( $split_hex_color[0] );
+                $rgb2 = hexdec( $split_hex_color[1] );
+                $rgb3 = hexdec( $split_hex_color[2] );
+
+                return 'rgba('. $rgb1 .', '. $rgb2 .', '. $rgb3 .', '. $transparency .')';
+
+            } else {
+
+                return 'var(--' . $theme_colors . ')';
+
+            }
+
+        }
 
     }
 

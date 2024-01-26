@@ -7,7 +7,7 @@ function add_custom_css_classes( $button, $form ) {
 	$dom->loadHTML( '<?xml encoding="utf-8" ?>' . $button );
 	$input = $dom->getElementsByTagName( 'input' )->item(0);
 	$classes = $input->getAttribute( 'class' );
-	$classes .= " btn btn-primary";
+	$classes .= " btn btn-success";
 	$input->setAttribute( 'class', $classes );
 	return $dom->saveHtml( $input );
 }

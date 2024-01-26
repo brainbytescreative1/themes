@@ -34,7 +34,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "choices": {
                 "left": "Left",
                 "center": "Center",
@@ -59,7 +58,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "clone": [
                 "group_646f908576c59"
             ],
@@ -87,7 +85,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "clone": [
                 "group_646f908576c59"
             ],
@@ -115,7 +112,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "open": 0,
             "multi_expand": 1,
             "endpoint": 0
@@ -134,7 +130,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "layout": "block",
             "acfe_seamless_style": 0,
             "acfe_group_modal": 0,
@@ -156,7 +151,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "acfe_save_meta": 0,
                     "default_value": "",
                     "min": "",
                     "max": "",
@@ -179,7 +173,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "acfe_save_meta": 0,
                     "choices": {
                         "px": "px",
                         "em": "em",
@@ -212,7 +205,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "layout": "block",
             "acfe_seamless_style": 0,
             "acfe_group_modal": 0,
@@ -234,7 +226,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "acfe_save_meta": 0,
                     "default_value": "",
                     "min": "",
                     "max": "",
@@ -257,7 +248,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "acfe_save_meta": 0,
                     "choices": {
                         "px": "px",
                         "em": "em",
@@ -290,7 +280,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "clone": [
                 "group_644fcd064f964"
             ],
@@ -330,7 +319,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1686088928,
+    "modified": 1699907420,
     "acfe_categories": {
         "options": "Options"
     }

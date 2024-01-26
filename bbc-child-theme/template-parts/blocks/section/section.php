@@ -77,8 +77,9 @@ $container_classes[] = 'element-container';
 //$container_classes[] = 'py-' . $default_padding;
 
 // container classes and styling
+$min_height_100vh_minus_menu_height = get_field('min_height_100vh_minus_menu_height');
 $min_height = get_field('min_height');
-if ( $min_height ) {
+if ( $min_height && ( $min_height_100vh_minus_menu_height !== 'enabled' ) ) {
     $value = $min_height['value'];
     if ( $value ) {
         $container_classes[] = 'has-min-height';
@@ -86,6 +87,11 @@ if ( $min_height ) {
         $min_height = 'min-height: ' . $value . $unit;
         $container_styles[] = $min_height . ';';
     }
+} else {
+    $header_height = get_field('header_height', 'header');
+    $container_classes[] = 'has-min-height';
+    $min_height = 'min-height: calc( 100vh - ' . $header_height . 'px)';
+    $container_styles[] = $min_height . ';';
 }
 
 $max_width = get_field('max_width');
@@ -101,7 +107,12 @@ if ( $max_width ) {
 
 $content_alignment = get_field('content_alignment');
 if ( $content_alignment ) {
-    $row_classes[] = 'align-' . $content_alignment;
+    if ( $content_alignment === 'left' ) {
+        $content_alignment = 'start';
+    } elseif ( $content_alignment === 'right' ) {
+        $content_alignment = 'end';
+    }
+    $row_classes[] = 'text-' . $content_alignment;
 }
 
 // columns per row
@@ -260,6 +271,7 @@ if ( $flex_element != 'none' ) {
 
 // process global functions
 $container_classes[] = get_spacing_bbc(get_field('container_spacing'), 'container');
+$container_classes[] = get_borders_bbc(get_field('container_borders'));
 $row_classes[] = get_spacing_bbc(get_field('row_spacing'));
 
 // process classes and styles
@@ -304,7 +316,11 @@ echo '<div class="'. esc_attr($container_classes) . esc_attr($class_name) .'" st
         echo $container_overlay;
     }
 
-    echo '<div class="'. esc_attr($row_classes) .'" style="'. esc_attr($row_styles) .'">'; // row start
+    $masonry = get_field('masonry');
+
+    ?>
+    <div class="<?=esc_attr($row_classes)?>"<?php if ( $masonry === 'enabled' ) { ?> data-masonry='{"percentPosition": true }' <?php } ?> style="<?=esc_attr($row_styles)?>">
+    <?
 
         if ( $row_overlay ) {
             echo $row_overlay;
@@ -497,10 +513,9 @@ echo '<div class="'. esc_attr($container_classes) . esc_attr($class_name) .'" st
 
                 // process global functions
                 $col_spacing = get_spacing_bbc(get_sub_field('column_spacing'), 'column');
-                //$col_classes[] = get_borders(get_sub_field('column_borders'));
 
                 $column_border_element = get_sub_field('column_border_element');
-                $borders = get_borders(get_sub_field('column_borders'));
+                $borders = get_borders_bbc(get_sub_field('column_borders'));
 
                 if ( $borders && ( $column_border_element !== 'default' ) ) {
                     if ( $column_border_element === 'col-element' ) {

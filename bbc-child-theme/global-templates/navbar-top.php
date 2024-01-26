@@ -13,12 +13,12 @@ if ( $top_menu_layout ) { // top menu fields start
     // container width
     $container = null;
 
-    $top_menu_width = get_field('top_menu_width', 'header');
+    /*$top_menu_width = get_field('top_menu_width', 'header');
     if ( $top_menu_width ) {
         $top_menu_classes[] = $top_menu_width;
     } else {
         $top_menu_classes[] = get_theme_mod( 'understrap_container_type' );
-    }
+    }*/
 
     $top_menu_classes[] = 'top-menu-container';
     $top_menu_classes[] = 'small';
@@ -236,10 +236,29 @@ if ( $top_menu_layout ) { // top menu fields start
         
     } elseif ( $top_menu_layout == 'single' ) {
 
-        $single_menu_select = get_field('single_menu_select', 'header');
+        $single_menu_classes = [];
 
-        if ( $right_menu_select ) {
-            echo '<div class="top-menu-container">'. $single_menu_select .'</div>';
+        $single_menu_classes[] = 'container';
+        $single_menu_classes[] = 'single-menu-container';
+
+        $single_menu_select = get_field('single_menu_select', 'header');
+        $single_menu_alignment = get_field('single_menu_alignment', 'header');
+
+        if ( $single_menu_alignment ) {
+            $single_menu_classes[] = 'd-flex';
+            if ( $single_menu_alignment === 'left' ) {
+                $single_menu_classes[] = 'justify-content-start';
+            } elseif ( $single_menu_alignment === 'center' ) {
+                $single_menu_classes[] = 'justify-content-center';
+            } elseif ( $single_menu_alignment === 'right' ) {
+                $single_menu_classes[] = 'justify-content-end';
+            }
+        }
+
+        $single_menu_classes = esc_attr( trim( implode(' ', $single_menu_classes ) ) );
+
+        if ( $single_menu_select ) {
+            echo '<div class="'. $single_menu_classes .'">'. $single_menu_select .'</div>';
         }
 
     }

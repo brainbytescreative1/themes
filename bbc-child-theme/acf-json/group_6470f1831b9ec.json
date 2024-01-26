@@ -33,7 +33,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "uploader": "wp",
             "return_format": "array",
             "library": "all",
@@ -46,6 +45,26 @@
             "max_size": "",
             "mime_types": "",
             "preview_size": "medium"
+        },
+        {
+            "key": "field_6543b06621813",
+            "label": "Image Link",
+            "name": "image_link",
+            "aria-label": "",
+            "type": "acfe_advanced_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "post",
+                "page"
+            ],
+            "taxonomy": ""
         },
         {
             "key": "field_649c3bdbec583",
@@ -78,7 +97,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "choices": {
                 "left": "Left",
                 "center": "Center",
@@ -103,7 +121,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "choices": {
                 "2048x2048": "Full",
                 "large": "Large (1024px)",
@@ -122,6 +139,29 @@
             "search_placeholder": ""
         },
         {
+            "key": "field_6543a5899ff1c",
+            "label": "Force Full Width",
+            "name": "force_full_width",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no": "no",
+                "yes": "yes"
+            },
+            "default_value": "no",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
             "key": "field_6470f1a0988f5",
             "label": "Max Width",
             "name": "max_width",
@@ -135,10 +175,12 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "layout": "block",
             "acfe_seamless_style": 0,
             "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large",
             "sub_fields": [
                 {
                     "key": "field_6470f1b9988f6",
@@ -154,7 +196,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "acfe_save_meta": 0,
                     "default_value": "",
                     "min": "",
                     "max": "",
@@ -177,7 +218,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "acfe_save_meta": 0,
                     "choices": {
                         "px": "px"
                     },
@@ -191,10 +231,7 @@
                     "allow_custom": 0,
                     "search_placeholder": ""
                 }
-            ],
-            "acfe_group_modal_close": 0,
-            "acfe_group_modal_button": "",
-            "acfe_group_modal_size": "large"
+            ]
         },
         {
             "key": "field_6471162015375",
@@ -210,10 +247,12 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "layout": "block",
             "acfe_seamless_style": 0,
             "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large",
             "sub_fields": [
                 {
                     "key": "field_6471162015376",
@@ -229,7 +268,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "acfe_save_meta": 0,
                     "default_value": "",
                     "min": "",
                     "max": "",
@@ -252,7 +290,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "acfe_save_meta": 0,
                     "choices": {
                         "px": "px",
                         "em": "em",
@@ -270,10 +307,7 @@
                     "allow_custom": 0,
                     "search_placeholder": ""
                 }
-            ],
-            "acfe_group_modal_close": 0,
-            "acfe_group_modal_button": "",
-            "acfe_group_modal_size": "large"
+            ]
         },
         {
             "key": "field_64c41575651a0",
@@ -289,7 +323,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "placement": "top",
             "endpoint": 0
         },
@@ -307,7 +340,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "clone": [
                 "group_64c16b209295d"
             ],
@@ -335,7 +367,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "placement": "top",
             "endpoint": 0
         },
@@ -353,7 +384,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "default_value": "",
             "maxlength": "",
             "placeholder": "",
@@ -386,8 +416,8 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1692649916,
     "acfe_categories": {
         "elements": "Elements"
-    }
+    },
+    "modified": 1699907419
 }

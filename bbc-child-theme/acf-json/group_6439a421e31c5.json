@@ -16,7 +16,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "choices": {
                 "JSON Upload": "JSON Upload",
                 "Paste Code": "Paste Code"
@@ -50,7 +49,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "uploader": "wp",
             "return_format": "url",
             "library": "all",
@@ -120,5 +118,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1691676392
+    "modified": 1699907423
 }

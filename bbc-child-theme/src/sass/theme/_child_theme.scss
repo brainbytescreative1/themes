@@ -35,23 +35,6 @@ body.understrap-has-sidebar {
 	}
 }
 
-h3 {
-	font-family: $font-family-base;
-	font-size: 1.5rem;
-}
-h4 {
-	font-family: $font-family-base;
-	font-size: 1.35rem;
-}
-h5 {
-	font-family: $font-family-base;
-	font-size: 1.15rem;
-}
-h6 {
-	font-family: $font-family-base;
-	font-size: 1rem;
-}
-
 @each $breakpoint in map-keys($grid-breakpoints) {
 	@include media-breakpoint-up($breakpoint) {
 		$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
@@ -76,4 +59,32 @@ h6 {
 		border-bottom: $border-width solid $border-color !important;
 		}
 	}
+}
+
+.line-through {
+    position: relative;
+    overflow: hidden;
+	line-height: inherit;
+    
+    span {
+        display: inline-block;
+        vertical-align: baseline;
+        zoom: 1;
+        *display: inline;
+        *vertical-align: auto;
+        position: relative;
+        padding: 0 20px;
+
+        &:before, &:after {
+            content: '';
+            display: block;
+            width: 1000px;
+            position: absolute;
+            top: 0.63em;
+            border-top: solid;
+        }
+
+        &:before { right: 100%; }
+        &:after { left: 100%; }
+    }
 }

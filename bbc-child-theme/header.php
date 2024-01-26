@@ -31,7 +31,6 @@ $body = get_field('body', 'code');
 	<script src="https://kit.fontawesome.com/ec15ef7364.js" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
 	<?php if ( $head ) {
 		echo $head;
@@ -58,8 +57,6 @@ $body = get_field('body', 'code');
 
 		<?php get_template_part( 'global-templates/navbar-top' ); ?>
 		<?php get_template_part( 'global-templates/navbar', $navbar_type . '-' . $bootstrap_version ); ?>
-		<?php if ( ( $header_style == 'rounded' ) || ( $header_style == 'flush' ) ) { get_template_part( 'global-templates/navbar-sticky' ); } ?>
+		<?php get_template_part( 'global-templates/navbar-sticky' ); ?>
 
 	</header><!-- #wrapper-navbar -->
-
-

@@ -39,7 +39,7 @@ function my_wp_nav_menu_objects( $items, $args ) {
 					$item->title = '<div class="menu-icon-container"><img class="menu-icon" src="'. $icon_url .'" alt="'. $title .'" /></div><div>' . $title . '</div>';
 				}
 				elseif ( $fa_icon && ( $add_icon == 'fontawesome' ) ) {
-					$item->title = '<div class="fa-icon-container">' . $fa_icon . '</div><div>' . $title . '</div>';
+					$item->title = '<div class="fa-icon-container">' . $fa_icon . '</div><div class="menu-item-title">' . $title . '</div>';
 				}
 			
 		}
@@ -99,28 +99,35 @@ function nav_submenu_fix(){ ?>
 <?php }
 
 add_action('wp_footer', 'first_element_spacing_js');
-function first_element_spacing_js(){ ?>
+function first_element_spacing_js(){ 
+	
+	$content_negative_margin = get_field('content_negative_margin', 'header');
 
+	if ( $content_negative_margin === 'enabled' ) { ?>
 
-	<!-- add spacing to first page element -->
-	<script>
-		// calculate menu height
-		let menu = document.querySelector('#wrapper-navbar');
-		let menuHeight = menu.offsetHeight;
+		<!-- add spacing to first page element -->
+		<script>
+			// calculate menu height
+			let menu = document.querySelector('#wrapper-navbar');
+			let menuHeight = menu.offsetHeight;
 
-		// apply style to content
-		// content wrapper
-		let content = document.querySelector('.wrapper');
-		content.style.marginTop = "-" + menuHeight + 'px';
+			// apply style to content
+			// content wrapper
+			let content = document.querySelector('.wrapper');
+			content.style.marginTop = "-" + menuHeight + 'px';
 
-		// get first element style
-		let firstElement = document.querySelector('.entry-content .element-container:first-child');
-		let firstElementStyle = getComputedStyle(firstElement);
+			// get first element style
+			let firstElement = document.querySelector('.entry-content .element-container:first-child');
+			let firstElementStyle = getComputedStyle(firstElement);
 
-		// set top padding of first element
-		let paddingTop = parseInt(firstElementStyle.paddingTop);
-		firstElement.style.setProperty("padding-top", ( menuHeight + paddingTop ) + 'px', "important")
-	</script>
+			// set top padding of first element
+			let paddingTop = parseInt(firstElementStyle.paddingTop);
+			firstElement.style.setProperty("padding-top", ( menuHeight + paddingTop ) + 'px', "important")
+		</script>
+
+	<?php } ?>
+
+	
 
 <?php };
 

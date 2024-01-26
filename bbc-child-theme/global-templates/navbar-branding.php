@@ -31,7 +31,8 @@ if ( ! has_custom_logo() ) { ?>
 } else {
 	//the_custom_logo();
 	$home_url = get_home_url();
-	$image = wp_get_attachment_image( get_theme_mod( 'custom_logo' ), 'medium' );
+    $logo_size = get_field('logo_size', 'header');
+	$image = wp_get_attachment_image( get_theme_mod( 'custom_logo' ), $logo_size );
 	?>
 	<a href="<?=esc_attr($home_url)?>" class="navbar-brand custom-logo-link" rel="home" aria-current="page">
 		<?=$image?>

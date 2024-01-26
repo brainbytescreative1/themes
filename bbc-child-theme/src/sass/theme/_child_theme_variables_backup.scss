@@ -2,6 +2,15 @@
 // To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
 // Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
 
+// colors
+$primary:       #00bbdd;
+$secondary:     #0a4976;
+$success:       #febe10;
+$info:          #cbf7ff;
+$light:         #f3f3f3;
+$dark:          #00233b;
+$gray:          $light;
+
 // breakpoints
 $container-max-widths: (
   sm: 540px,
@@ -24,10 +33,6 @@ $spacers: (
 // negative margin
 $enable-negative-margins: true;
 
-// remove !important
-$enable-important-utilities: true;
-
-// buttons
 $input-btn-padding-x:   1rem !default;
 $input-btn-padding-y:   .35rem !default;
 $btn-padding-x:         $input-btn-padding-x;

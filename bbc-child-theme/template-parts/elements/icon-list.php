@@ -43,7 +43,7 @@ if( get_row_layout() == 'icon_list' ):
                 $icon_spacing = '0';
             }
             if ( $orientation == 'horizontal' ) {
-                $list_item_classes[] = 'pb-' . $icon_spacing;
+                $list_item_classes[] = 'pe-' . $icon_spacing;
             } elseif ( $orientation == 'vertical' ) {
                 $list_item_classes[] = 'pb-' . $icon_spacing;
             }

@@ -16,7 +16,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "default_value": "",
             "placeholder": "",
             "mode": "text\/html",
@@ -41,7 +40,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "default_value": "",
             "placeholder": "",
             "mode": "text\/html",
@@ -66,7 +64,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "default_value": "",
             "placeholder": "",
             "mode": "text\/html",
@@ -103,7 +100,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1688573685,
+    "modified": 1699907417,
     "acfe_categories": {
         "options": "Options"
     }
