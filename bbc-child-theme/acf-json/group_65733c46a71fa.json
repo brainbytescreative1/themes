@@ -938,8 +938,8 @@
         },
         {
             "key": "field_657354d9bf3d8",
-            "label": "H5",
-            "name": "h5",
+            "label": "H6",
+            "name": "h6",
             "aria-label": "",
             "type": "group",
             "instructions": "Leave blank for default. Font size affects desktop only.",
