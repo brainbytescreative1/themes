@@ -132,7 +132,6 @@ function get_background_bbc($field, $classes, $styles, $sub = false) {
 
                         /* Check for 404 (file not found). */
                         $httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
-                        echo $httpCode;
                         if( ( $httpCode === 403 ) || ( $httpCode === 404 ) ) {
                             $image = $image;
                         } else {
