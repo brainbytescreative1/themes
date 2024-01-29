@@ -524,20 +524,16 @@ if ( $mobile_radius_5 ) {
 }
 ?>
 
-<?php if ( !is_admin() ) { ?>
-@media screen and (min-width: 991px) {
+}
 
-h1, .h1 {
+/* h1 */
+<?php $h1 = get_field('h1', 'style'); ?>
+.site h1, 
+.site .h1,
+.is-root-container h1,
+.is-root-container .h1 {
 <?php
-$h1 = get_field('h1', 'style');
 if ( $h1 ) {
-    // size
-    if ( $h1['font_size'] ) {
-        if ( $h1['font_size']['value'] ) {
-            echo 'font-size: ' . $h1['font_size']['value'] . $h1['font_size']['unit'] . ';';
-            echo "\r\n";
-        }
-    }
     // family
     if ( $h1['font_family'] ) {
         echo 'font-family: var(--font-' . $h1['font_family'] . ');';
@@ -557,17 +553,31 @@ if ( $h1 ) {
 ?>
 }
 
-h2, .h2 {
-<?php
-$h2 = get_field('h2', 'style');
-if ( $h2 ) {
-    // size
-    if ( $h2['font_size'] ) {
-        if ( $h2['font_size']['value'] ) {
-            echo 'font-size: ' . $h2['font_size']['value'] . $h2['font_size']['unit'] . ';';
-            echo "\r\n";
+@media screen and (min-width: 991px) {
+    .site h1, 
+    .site .h1,
+    .is-root-container h1,
+    .is-root-container .h1 {
+        <?php
+        // size
+        if ( $h1['font_size'] ) {
+            if ( $h1['font_size']['value'] ) {
+                echo 'font-size: ' . $h1['font_size']['value'] . $h1['font_size']['unit'] . ';';
+                echo "\r\n";
+            }
         }
+        ?>
     }
+}
+
+/* h2 */
+<?php $h2 = get_field('h2', 'style'); ?>
+.site h2, 
+.site .h2,
+.is-root-container h2,
+.is-root-container .h2 {
+<?php
+if ( $h2 ) {
     // family
     if ( $h2['font_family'] ) {
         echo 'font-family: var(--font-' . $h2['font_family'] . ');';
@@ -587,17 +597,31 @@ if ( $h2 ) {
 ?>
 }
 
-h3, .h3 {
-<?php
-$h3 = get_field('h3', 'style');
-if ( $h3 ) {
-    // size
-    if ( $h3['font_size'] ) {
-        if ( $h3['font_size']['value'] ) {
-            echo 'font-size: ' . $h3['font_size']['value'] . $h3['font_size']['unit'] . ';';
-            echo "\r\n";
+@media screen and (min-width: 991px) {
+    .site h2, 
+    .site .h2,
+    .is-root-container h2,
+    .is-root-container .h2 {
+        <?php
+        // size
+        if ( $h2['font_size'] ) {
+            if ( $h2['font_size']['value'] ) {
+                echo 'font-size: ' . $h2['font_size']['value'] . $h2['font_size']['unit'] . ';';
+                echo "\r\n";
+            }
         }
+        ?>
     }
+}
+
+/* h3 */
+<?php $h3 = get_field('h3', 'style'); ?>
+.site h3, 
+.site .h3,
+.is-root-container h3,
+.is-root-container .h3 {
+<?php
+if ( $h3 ) {
     // family
     if ( $h3['font_family'] ) {
         echo 'font-family: var(--font-' . $h3['font_family'] . ');';
@@ -617,17 +641,31 @@ if ( $h3 ) {
 ?>
 }
 
-h4, .h4 {
-<?php
-$h4 = get_field('h4', 'style');
-if ( $h4 ) {
-    // size
-    if ( $h4['font_size'] ) {
-        if ( $h4['font_size']['value'] ) {
-            echo 'font-size: ' . $h4['font_size']['value'] . $h4['font_size']['unit'] . ';';
-            echo "\r\n";
+@media screen and (min-width: 991px) {
+    .site h3, 
+    .site .h3,
+    .is-root-container h3,
+    .is-root-container .h3 {
+        <?php
+        // size
+        if ( $h3['font_size'] ) {
+            if ( $h3['font_size']['value'] ) {
+                echo 'font-size: ' . $h3['font_size']['value'] . $h3['font_size']['unit'] . ';';
+                echo "\r\n";
+            }
         }
+        ?>
     }
+}
+
+/* h4 */
+<?php $h4 = get_field('h4', 'style'); ?>
+.site h4, 
+.site .h4,
+.is-root-container h4,
+.is-root-container .h4 {
+<?php
+if ( $h4 ) {
     // family
     if ( $h4['font_family'] ) {
         echo 'font-family: var(--font-' . $h4['font_family'] . ');';
@@ -647,17 +685,31 @@ if ( $h4 ) {
 ?>
 }
 
-h5, .h5 {
-<?php
-$h5 = get_field('h5', 'style');
-if ( $h5 ) {
-    // size
-    if ( $h5['font_size'] ) {
-        if ( $h5['font_size']['value'] ) {
-            echo 'font-size: ' . $h5['font_size']['value'] . $h5['font_size']['unit'] . ';';
-            echo "\r\n";
+@media screen and (min-width: 991px) {
+    .site h4, 
+    .site .h4,
+    .is-root-container h4,
+    .is-root-container .h4 {
+        <?php
+        // size
+        if ( $h4['font_size'] ) {
+            if ( $h4['font_size']['value'] ) {
+                echo 'font-size: ' . $h4['font_size']['value'] . $h4['font_size']['unit'] . ';';
+                echo "\r\n";
+            }
         }
+        ?>
     }
+}
+
+/* h5 */
+<?php $h5 = get_field('h5', 'style'); ?>
+.site h5, 
+.site .h5,
+.is-root-container h5,
+.is-root-container .h5 {
+<?php
+if ( $h5 ) {
     // family
     if ( $h5['font_family'] ) {
         echo 'font-family: var(--font-' . $h5['font_family'] . ');';
@@ -677,17 +729,31 @@ if ( $h5 ) {
 ?>
 }
 
-h6, .h6 {
-<?php
-$h6 = get_field('h6', 'style');
-if ( $h6 ) {
-    // size
-    if ( $h6['font_size'] ) {
-        if ( $h6['font_size']['value'] ) {
-            echo 'font-size: ' . $h6['font_size']['value'] . $h6['font_size']['unit'] . ';';
-            echo "\r\n";
+@media screen and (min-width: 991px) {
+    .site h5, 
+    .site .h5,
+    .is-root-container h5,
+    .is-root-container .h5 {
+        <?php
+        // size
+        if ( $h5['font_size'] ) {
+            if ( $h5['font_size']['value'] ) {
+                echo 'font-size: ' . $h5['font_size']['value'] . $h5['font_size']['unit'] . ';';
+                echo "\r\n";
+            }
         }
+        ?>
     }
+}
+
+/* h6 */
+<?php $h6 = get_field('h6', 'style'); ?>
+.site h6, 
+.site .h6,
+.is-root-container h6,
+.is-root-container .h6 {
+<?php
+if ( $h6 ) {
     // family
     if ( $h6['font_family'] ) {
         echo 'font-family: var(--font-' . $h6['font_family'] . ');';
@@ -707,9 +773,19 @@ if ( $h6 ) {
 ?>
 }
 
+@media screen and (min-width: 991px) {
+    .site h6, .site .h6 {
+        <?php
+        // size
+        if ( $h6['font_size'] ) {
+            if ( $h6['font_size']['value'] ) {
+                echo 'font-size: ' . $h6['font_size']['value'] . $h6['font_size']['unit'] . ';';
+                echo "\r\n";
+            }
+        }
+        ?>
+    }
 }
-
-<?php } ?>
 
 <?php
 $theme_css = get_field('theme_css', 'css');
@@ -721,63 +797,65 @@ echo "\r\n";
 
 /** admin **/
 /* backgrounds */
-.editor-styles-wrapper .bg-primary {
-    background-color: var(--primary) !important;
-}
-.editor-styles-wrapper .bg-secondary {
-    background-color: var(--secondary) !important;
-}
-.editor-styles-wrapper .bg-success {
-    background-color: var(--success) !important;
-}
-.editor-styles-wrapper .bg-info {
-    background-color: var(--info) !important;
-}
-.editor-styles-wrapper .bg-danger {
-    background-color: var(--danger) !important;
-}
-.editor-styles-wrapper .bg-warning {
-    background-color: var(--warning) !important;
-}
-.editor-styles-wrapper .bg-light {
-    background-color: var(--light) !important;
-}
-.editor-styles-wrapper .bg-dark {
-    background-color: var(--dark) !important;
-}
-.editor-styles-wrapper .bg-gray {
-    background-color: var(--gray) !important;
-}
-.editor-styles-wrapper .bg-white {
-    background-color: var(--white) !important;
-}
-/* text */
-.editor-styles-wrapper .text-primary {
-    color: var(--primary) !important;
-}
-.editor-styles-wrapper .text-secondary {
-    color: var(--secondary) !important;
-}
-.editor-styles-wrapper .text-info {
-    color: var(--info) !important;
-}
-.editor-styles-wrapper .text-danger {
-    color: var(--danger) !important;
-}
-.editor-styles-wrapper .text-warning {
-    color: var(--warning) !important;
-}
-.editor-styles-wrapper .text-light {
-    color: var(--light) !important;
-}
-.editor-styles-wrapper .text-dark {
-    color: var(--dark) !important;
-}
-.editor-styles-wrapper .text-gray {
-    color: var(--gray) !important;
-}
-.editor-styles-wrapper .text-white {
-    color: var(--white) !important;
+:root {
+    .editor-styles-wrapper .bg-primary {
+        background-color: var(--primary) !important;
+    }
+    .editor-styles-wrapper .bg-secondary {
+        background-color: var(--secondary) !important;
+    }
+    .editor-styles-wrapper .bg-success {
+        background-color: var(--success) !important;
+    }
+    .editor-styles-wrapper .bg-info {
+        background-color: var(--info) !important;
+    }
+    .editor-styles-wrapper .bg-danger {
+        background-color: var(--danger) !important;
+    }
+    .editor-styles-wrapper .bg-warning {
+        background-color: var(--warning) !important;
+    }
+    .editor-styles-wrapper .bg-light {
+        background-color: var(--light) !important;
+    }
+    .editor-styles-wrapper .bg-dark {
+        background-color: var(--dark) !important;
+    }
+    .editor-styles-wrapper .bg-gray {
+        background-color: var(--gray) !important;
+    }
+    .editor-styles-wrapper .bg-white {
+        background-color: var(--white) !important;
+    }
+    /* text */
+    .editor-styles-wrapper .text-primary {
+        color: var(--primary) !important;
+    }
+    .editor-styles-wrapper .text-secondary {
+        color: var(--secondary) !important;
+    }
+    .editor-styles-wrapper .text-info {
+        color: var(--info) !important;
+    }
+    .editor-styles-wrapper .text-danger {
+        color: var(--danger) !important;
+    }
+    .editor-styles-wrapper .text-warning {
+        color: var(--warning) !important;
+    }
+    .editor-styles-wrapper .text-light {
+        color: var(--light) !important;
+    }
+    .editor-styles-wrapper .text-dark {
+        color: var(--dark) !important;
+    }
+    .editor-styles-wrapper .text-gray {
+        color: var(--gray) !important;
+    }
+    .editor-styles-wrapper .text-white {
+        color: var(--white) !important;
+    }
 }
 
 </style>
